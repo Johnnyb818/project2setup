@@ -6,20 +6,34 @@ class Layout extends React.Component {
       <html>
         <head>
           <title>{this.props.title}</title>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" integrity="sha512-xiunq9hpKsIcz42zt0o2vCo34xV0j6Ny8hgEylN3XBglZDtTZ2nwnqF/Z/TTCc18sGdvCjbFInNd++6q3J0N6g==" crossorigin="anonymous" />
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
           <link rel="stylesheet" href="/css/style.css"/>
           <script src="/js/app.js"></script>
         </head>
         <body>
-          <header>
-            <h1>JohnnyB's <span>Boardshop</span></h1>
-            <nav><span><a href="/auth/signup">SIGN UP</a></span></nav>
-            <nav><span><a href="/auth/login">LOGIN</a></span></nav>
-            <nav><span><a href="/auth/logout">LOGOUT</a></span></nav>
-          </header>
-          <main>{this.props.children}</main>
-          <footer>
-          </footer>
+        <header>
+        <nav className="navbar navbar-inverse">
+          <div className="container-fluid">
+            <div className="navbar-header">
+              <a className="navbar-brand"><span className="logo-style">Style</span> <span className="logo-points">Points</span></a>
+            </div>
+            <ul className="nav navbar-nav">
+              <li className="active"><a href="/boards/">Home</a></li>              
+            </ul>
+            <ul className="nav navbar-nav navbar-right">
+              <li><a href="/auth/signup"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="/auth/login"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
+              <li><a href="/auth/logout"><span className="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            </ul>
+          </div>
+        </nav>
+        </header>
+        <main>{this.props.children}</main>
+
+        <footer>
+        </footer>
         </body>
       </html>
     );

@@ -10,6 +10,9 @@ const { Schema, model } = require("mongoose");
 const boardSchema = new Schema({
   username: { type: String, required: true,},
   board: { type: String, required: true },
+  img: {type: String, required: true},
+  details: {type: String, required: true},
+  price: {type: String, required: true}
 });
 
 ////////////////////////////////////

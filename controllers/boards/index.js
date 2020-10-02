@@ -85,6 +85,17 @@ router.put("/edit/:id", auth, async (req, res) => {
   }
 })
 
+//Show
+router.get('/:id', (req, res) => {
+  Board.findById(req.params.id, (error, foundBoard) => {
+    res.render("boards/show.jsx", {
+      board: foundBoard,
+      index: req.params.id
+    })
+  })
+})
+
+
 //TEST ROUTE TO SHOW HOW AUTH MIDDLEWARE WORKS
 
 router.get("/", auth, (req, res) => {

@@ -5,18 +5,15 @@ class Index extends React.Component {
   render() {
     const {boards} = this.props
     return (
-      <Layout title="JohnnyB's Boardshop">
-        <h1> My Boards </h1>
-        <a href="/boards/new"><button>New Board</button></a>
+      <Layout title="Style Points">
+        <h1> My Rip List </h1>
+        <a href="/boards/new"><button type="button" class="btn btn-dark">Add Rip Item</button></a>
         {boards.map((board) => (
-        <div>
-          <h2>{board.board}</h2>
-          <form action={`/boards/${board._id}?_method=DELETE`} method="POST">
-            <input type="submit" value="delete"/>
-          </form>
-          <form action={`/boards/edit/${board._id}`} method="GET">
-            <input type="submit" value="edit"/>
-          </form>
+        <div>          
+          <div className="board-title-div container"><h2 className="board-title">{board.board}</h2></div> 
+           <br/>       
+          <div><a href={`/boards/${board._id}`}><img src={board.img}/></a></div>
+          <br/>
         </div>
         ))}
       </Layout>
