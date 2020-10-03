@@ -4,13 +4,21 @@ const Layout = require("../layout.jsx");
 class Index extends React.Component {
   render() {
     return (
-      <Layout title="New Board">
+      <Layout title="New Item">
         <form action="/boards/" method="post">
-          <input type="text" placeholder="write board name here" name="board"/>
-          <input type="text" placeholder="Image URL" name="img"/>
-          <input type="text" placeholder="Details" name="details"/>
-          <input type="text" placeholder="Price" name="price"/>
-          <input type="submit" value="create board"/>          
+          <div className="form-group">
+            <input type="text" className="form-control-lg input-lg" placeholder="write board name here" name="board"/>
+          </div>
+          <div className="form-group">
+            <input type="text" className="form-control-lg input-lg" placeholder="Image URL" name="img"/>
+          </div>
+          <div className="form-group">
+            <input type="text" className="form-control-lg input-lg" placeholder="Details" name="details"/>
+          </div>
+          <div className="form-group">
+            <input type="text" className="form-control-lg input-lg" placeholder="Price" name="price"/>
+          </div>
+          <input className="btn btn-primary btn-lg" type="submit" value="create item"/>          
         </form>
       </Layout>
     );

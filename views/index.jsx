@@ -5,8 +5,8 @@ class Index extends React.Component {
   render() {
     return (
       <Layout title="Style Points">
-        <h1>Welcome to Style Points</h1>
-        <h2>Login to get Steezy!</h2>
+        <h1 className="index-hello">Welcome to Style Points</h1>
+        <h2 className="index-login">Login to get Steezy!</h2>
       </Layout>
     );
   }

@@ -6,16 +6,17 @@ class Show extends React.Component {
         const {board, index} = this.props
         return(
             <Layout>
-            <h2>{board.board}</h2>
+            <h2 className="show-board-title">{board.board}</h2>
             <img src={board.img}/>
-            <p>{board.details}</p>
-            <h3>${board.price}</h3>
-            <form action={`/boards/${board._id}?_method=DELETE`} method="POST">
-            <input type="submit" value="delete"/>
-            </form>
-            <form action={`/boards/edit/${board._id}`} method="GET">
-                <input type="submit" value="edit"/>
-            </form>
+            <br/>
+            <p className="details-font-color">{board.details}</p>
+            <h3 className="price-color">${board.price}</h3>
+                <form action={`/boards/${board._id}?_method=DELETE`} method="POST">
+                    <input className="btn btn-danger btn-lg" type="submit" value="delete"/>
+                </form>
+                <form action={`/boards/edit/${board._id}`} method="GET">
+                    <input className="btn btn-primary btn-lg" type="submit" value="edit"/>
+                </form>
             </Layout>
         )
     }

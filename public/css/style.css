@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 body {
-    background: url('https://images.unsplash.com/photo-1587991545721-91fa289117f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
-    background-size: cover;
+    background: url('https://images.unsplash.com/photo-1513628253939-010e64ac66cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+    background-position: center;
+    background-size: 100%;
+    font-family: 'Bangers', cursive;
 }
 
 
@@ -11,7 +14,7 @@ main {
 
 
 .logo-style {
-    color: wheat;
+    color: gold;
 }
 
 
@@ -19,14 +22,27 @@ main {
     color: teal;
 }
 
+.my-rip-list{
+    font-size: 75px;
+    color: teal;
+}
+
 
 img {
-    height: 32vh;
-    width: 25vw;
-    max-width: 200px;
-    max-height: 250px;
+    height: auto;
+    width: 35vw; 
+    max-width: 100%; 
+    max-height: 50%;
     min-width: 100px;
     min-height: 150px;
+    border: 10px solid  rgb(131, 16, 131);
+    
+}
+
+
+.show-board-title {
+    color:teal;
+    font-size: 40px;
 }
 
 
@@ -37,10 +53,36 @@ img {
 
 .board-title-div {
     border: solid teal;
-
+    background-color: rgb(25, 26, 28);
 }
+
 
 .btn-dark {
     background-color: teal;
     color: rgb(131, 16, 131);
+    margin-bottom: 10px;
 }
+
+
+.details-font-color {
+    color:teal;
+    font-size: 25px;
+    background-color:  rgb(25, 26, 28);
+    border: 10px solid  rgb(131, 16, 131);
+    margin-top: 10px;
+}
+
+
+.price-color {
+    color: gold;
+    font-size: 40px;
+}
+
+.index-hello {
+    color: gold;
+}
+
+.index-login {
+    color: teal;
+}
+
