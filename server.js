@@ -25,6 +25,7 @@ const boardRouter = require("./controllers/boards")
 const session = require("express-session");
 const methodOverride = require("method-override");
 const morgan = require("morgan");
+const MongoStore = require("connect-mongo")(session);
 
 ///////////////////////////////
 // Set View Engine
@@ -50,7 +51,7 @@ app.use(
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true })); //comment if not using forms
 app.use(methodOverride("_method"));
-const MongoStore = require("connect-mongo")(session);
+
 // app.use(express.json()) uncomment if using json
 app.use(morgan("tiny")); //logging
 
