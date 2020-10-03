@@ -42,13 +42,15 @@ app.use(
   session({
     secret: SECRET,
     resave: false,
-    saveUninitialized: true,
-    cookie: { secure: process.env.NODE_ENV === "production" },
+    saveUninitialized: false,
+    // cookie: { secure: process.env.NODE_ENV === "production" },
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
   })
 );
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true })); //comment if not using forms
 app.use(methodOverride("_method"));
+const MongoStore = require("connect-mongo")(session);
 // app.use(express.json()) uncomment if using json
 app.use(morgan("tiny")); //logging
 
